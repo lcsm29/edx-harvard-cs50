@@ -1,11 +1,36 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
-int main(void) {
+int is_number(char s[])
+{
+    int i = 0;
+    if (s[i] == '-')
+    {
+        i++;
+    }
+    for (; s[i] != '\0'; i++)
+    {
+        if (isdigit(s[i]) == 0)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main(void)
+{
     int height = 0;
-    while (height <= 0 | height > 8)
+    while (height <= 0 || height > 8)
     {
         printf("Enter the desired height (1-8): ");
-        scanf("%d", &height);
+        char tmp[256];
+        scanf("%s", tmp);
+        if (is_number(tmp))
+        {
+            height = atoi(tmp);
+        }
     }
     for (int i = 1; i <= height; i++)
     {
