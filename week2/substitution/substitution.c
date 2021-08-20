@@ -2,11 +2,6 @@
 #include <string.h>
 #include <ctype.h>
 
-int len(char *s)
-{
-    return sizeof(s);
-}
-
 int main(int argc, char *argv[])
 {
     // If there are no arguments, print usage and exit
