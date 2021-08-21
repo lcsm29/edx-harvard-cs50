@@ -1,11 +1,11 @@
-sort1 uses: TODO
+sort1 uses: Bubble sort
 
-How do you know?: TODO
+How do you know?: Based on the time consumptions, it appears to have O(n**2) time complexity on random or reversed datasets, while O(n) complexity on sorted datasets. 
 
-sort2 uses: TODO
+sort2 uses: Merge sort
 
-How do you know?: TODO
+How do you know?: Based on the time consumptions, it appears to have O(n * log(n)) time complexity on every dataset.
 
-sort3 uses: TODO
+sort3 uses: Selection sort
 
-How do you know?: TODO
+How do you know?: It took more or less the same time regardless of how the data is stored (random, reversed, or sorted). It also appeared to have O(n**2) complexity.
