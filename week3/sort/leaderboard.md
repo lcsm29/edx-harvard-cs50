@@ -70,17 +70,17 @@
 |  /sort3  |  208.822s  |  145.998s  |  4.587s  |
 
 ## Analysis
-### sort1
+### sort1: Bubble sort
 * sort1 was faster than any other algorithms on the already sorted datasets, but it was also substantially slower than any other algorithms on every other datasets.
-* It took significantly longer time as the size of datasets grows. When the size of dataset doubles (i.e. 5k -> 10k), it took 301% more time to sort on average (4.41x, 3.96x, 3.68x, respectively). When the size of datasets grows 10 times (i.e. 5k -> 50k), it took 149.66x times on the random datasets and 101.92x times on the reversed datasets, but only 7.46x times on the already sorted datasets. This suggests `O(n**2)` complexity on non-sorted datasets, but `O(n)` complexity on the already sorted datasets.
+* It took significantly longer time as the size of datasets grows. When the size of dataset doubles (i.e. 5k -> 10k), it took 301% more time to sort on average (4.41x, 3.96x, 3.68x, respectively). When the size of datasets grows 10 times (i.e. 5k -> 50k), it took 149.66x times on the random datasets and 101.92x times on the reversed datasets, but only 7.46x times on the already sorted datasets. This suggests `O(n**2)` time complexity on non-sorted datasets, but `O(n)` time complexity on the already sorted datasets(i.e. the best case).
 * It was substantially faster on the already sorted datasets, compare to the non-sorted datasets, but only exhibits marginal differences between the random and reversed datasets.
 
-### sort2
+### sort2: Merge sort
 * sort2 was substantially faster than any other algorithms on the random and reversed datasets, but it was slightly slower than sort1 on the already sorted datasets.
-* The durations were almost directly proportional to the dataset sizes, which suggests `O(n)` complexity.
+* The durations were almost directly proportional to the dataset sizes, which suggests either `O(n)` or `O(n * log(n))` time complexity.
 * It was consistently slower on the random datasets than reversed datasets. Likewise, it was substantially slower on the reversed datasets than already sorted datasets.
 
-### sort3
+### sort3: Selection sort
 * sort3 was the middle of the pack on the random and reversed datasets, but it was the slowest algorithm on the already sorted dataset.
-* The durations were more or less proportional to the square of the dataset sizes, which suggest `O(n**2)` complexity.
+* The durations were more or less proportional to the square of the dataset sizes, which suggest `O(n**2)` time complexity.
 * Regardless of how the data is sorted, It took more or less the same time to sort.
